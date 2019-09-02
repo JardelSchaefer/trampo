@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Util\LogConsulta;
 use Illuminate\Http\Request;
 
 class ProdutosController extends Controller
@@ -14,7 +14,7 @@ class ProdutosController extends Controller
        $pagina = "Produtos";
        $data = $log->registrar($ip, $pagina);
         
-        return view('site.produtos');
+        return view('site.produto');
        
     }
 }

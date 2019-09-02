@@ -37,5 +37,12 @@ class LogConsulta {
         $dados = file_get_contents($this->caminho.'/log_geral.txt');
         return $dados;
     }
+    public function capture(){
+        
+        $dados = file_get_contents($this->caminho.'/log_geral.txt');
+        $dados = explode("\n", $dados);
+        $dados = array_reverse($dados);
+        return $dados[0];
+    }
 
 }
